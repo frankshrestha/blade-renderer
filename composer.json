@@ -1,0 +1,30 @@
+{
+    "name": "abitofmaya/blade-renderer",
+    "description": "Standalone Blade Template Renderer",
+    "keywords": ["blade", "template"],
+    "homepage": "https://github.com/frankshrestha/blade-renderer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Shrestha",
+            "email": "abitofmaya@outlook.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/frankshrestha/blade-renderer",
+        "issues": "https://github.com/frankshrestha/blade-renderer/issues"
+    },
+    "require": {
+        "php": "^8.2",
+        "illuminate/view": "^11.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "abitofmaya\\BladeRenderer\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": "php -r \"umask(0); !is_dir('resources/views') && mkdir('resources/views', 0760, true); !is_dir('storage/framework/views') && mkdir('storage/framework/views', 0760, true);\""
+    },
+    "minimum-stability": "stable"
+}
